@@ -1,0 +1,78 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+  height: 600px;
+  /*background: gray;*/
+  background-image: url("../images/bg_itm_lineup.jpg");
+
+}
+
+.mySlide {
+  /*position: relative;*/
+  /*display: none;*/
+  /*animation: move 2s linear;*/
+  overflow: hidden;
+  /*list-style: none;*/
+}
+
+/*.mySlide ul {*/
+  /*list-style: none;*/
+  /*margin-left: -40px;*/
+  /*margin-top: 0px;*/
+/*}*/
+
+@keyframes move {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.notSlide {
+  position: absolute;
+  margin-top: 235px;
+}
+
+.mySlide img {
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 105px;
+  /*display: block;*/
+  overflow: hidden;
+}
+
+
+.button-lef-right {
+  /*margin-top: -210px;*/
+  
+}
+
+.prev {
+  /*position: fixed;*/
+  margin-top: 240px;
+  margin-left: 55px;
+  cursor: pointer;
+  
+}
+
+.next {
+  /*position: fixed;*/
+  margin-top: 240px;
+  margin-left: 745px;
+  cursor: pointer;
+  
+}
+
+.currentSlide {
+  margin-top: 145px;
+  margin-left: 200px;
+  cursor: pointer;
+}
+
+.active,
+.item:hover {
+ opacity: 0.5;
+}
