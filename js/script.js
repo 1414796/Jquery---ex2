@@ -2,21 +2,48 @@
 var total = $(".mySlide img").length;
 var slide = $(".mySlide img");
 var slideIndex = 0;
+var key = 0;
 var num = false;
 
+// auto slide after 5s
+// window.setInterval(function() {
+//     $('.next').click();
+// }, 5000);
+
+// event when click button left
 function moveLeft(n) {
     slideIndex += n;
+    key = n;
     showSlide(slideIndex);
+    TweenMax.fromTo($(".mySlide img").eq(slideIndex-1), 0.3, {x:-650, y:0}, {x:  0, y: 0});
+
 }
 
+// event when click button right
 function moveRight(n) {
     slideIndex += n;
+    key = n;
     showSlide(slideIndex);
+    // $(".mySlide img").eq(slideIndex-2).style.display = "block";
+    TweenMax.fromTo($(".mySlide img").eq(slideIndex-1), 0.3, {x:  650, y: 0}, {x:0, y:0});
+
 }
 
+//when click on item
 function moveItem(n) {
-    slideIndex = n;
+    slideIndex =n;
+
     showSlide(slideIndex);
+    if (key<n & key != 0) {
+        TweenMax.fromTo($(".mySlide img").eq(slideIndex-1), 0.3, {x:  650, y: 0}, {x: 0, y: 0});
+    }
+    else if (key>n| key == 0) {
+        TweenMax.fromTo($(".mySlide img").eq(slideIndex-1), 0.3, {x: -650, y: 0}, {x: 0, y: 0});
+    }
+    else {
+        return;
+    }
+    key = n;
 
 }
 
@@ -34,26 +61,21 @@ function showSlide(n) {
         }
     }
     for (var i = 0; i < total; i++) {
-        slide[i].style.display = "none";
+        // if (i != slideIndex) {
+            slide[i].style.display = "none";
+        // }
+
     }
-    for (var j = 0; j < total; j++) {
+    for (var j = 1; j < total; j++) {
         $(".item")[j].className = $(".item")[j].className.replace("active", "");
+        // $(".item")[j].removeClass("active");
     }
+
     $(".mySlide img")[slideIndex-1].style.display = "block";
-    // setInterval(function () {
-    //    $(".mySlide").animate({
-    //        marginLeft: '+=600px'
-    //    }, 2000)
-    // });
-    // TweenMax.fromTo(".mySlide", 2, 0, 300);
+
     num = true;
 
-    $(".item")[slideIndex-1].className += " active";
+    $(".item")[slideIndex-1].off("click", ".active").className += " active";
 
 }
 
-$(document).ready(function () {
-
-
-
-});

@@ -5,21 +5,26 @@
   height: 600px;
   /*background: gray;*/
   background-image: url("../images/bg_itm_lineup.jpg");
-
+  
 }
 
 .mySlide {
-  /*position: relative;*/
+  position: relative;
+  padding-top: 90px;
+  /*padding-left: 130px;*/
+  margin-left: 130px;
   /*display: none;*/
   /*animation: move 2s linear;*/
   overflow: hidden;
   /*list-style: none;*/
+  width: 650px;
+  height: 335px;
 }
 
 /*.mySlide ul {*/
-  /*list-style: none;*/
-  /*margin-left: -40px;*/
-  /*margin-top: 0px;*/
+/*list-style: none;*/
+/*margin-left: -40px;*/
+/*margin-top: 0px;*/
 /*}*/
 
 @keyframes move {
@@ -33,15 +38,19 @@
 
 .notSlide {
   position: absolute;
-  margin-top: 235px;
+  margin-top: -207px;
+}
+
+.mySlide:after {
+  clear: both;
 }
 
 .mySlide img {
   position: absolute;
-  margin-left: 150px;
-  margin-top: 105px;
+  float: left;
+  /*display: none;*/
   /*display: block;*/
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 
@@ -74,5 +83,5 @@
 
 .active,
 .item:hover {
- opacity: 0.5;
+  opacity: 0.5;
 }

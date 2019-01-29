@@ -9,40 +9,34 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="mySlide">
-      <img class="" src="images/item_01.png" alt="item1">
-      <img class="" src="images/item_02.png" alt="item2">
-      <img class="" src="images/item_03.png" alt="item3">
-      <img class="" src="images/item_04.png" alt="item4">
-      <img class="" src="images/item_05.png" alt="item5">
-      <!--<ul>-->
-        <!--<li><img class="" src="images/item_01.png" alt="item1"></li>-->
-        <!--<li><img class="" src="images/item_02.png" alt="item2"></li>-->
-        <!--<li><img class="" src="images/item_03.png" alt="item3"></li>-->
-        <!--<li><img class="" src="images/item_04.png" alt="item4"></li>-->
-        <!--<li><img class="" src="images/item_05.png" alt="item1"></li>-->
-      <!--</ul>-->
-    </div>
+<div class="container">
+  <div class="mySlide">
+    <img class="" src="images/item_01.png" alt="item1">
+    <img class="" src="images/item_02.png" alt="item2">
+    <img class="" src="images/item_03.png" alt="item3">
+    <img class="" src="images/item_04.png" alt="item4">
+    <img class="" src="images/item_05.png" alt="item5">
 
-    <!--button left right and list item-->
-    <div class="notSlide">
-      <div class="button-lef-right">
-        <a class="prev" onclick="moveLeft(-1)"><img src="images/arrow_l_off.png"></a>
-        <a class="next" onclick="moveRight(1)"><img src="images/arrow_r_off.png"></a>
-      </div>
-  
-      <div class="currentSlide">
-        <span class="item" onclick="moveItem(1)"><img src="images/item_navi_01.png" alt="item1"></span>
-        <span class="item" onclick="moveItem(2)"><img src="images/item_navi_02.png" alt="item2"></span>
-        <span class="item" onclick="moveItem(3)"><img src="images/item_navi_03.png" alt="item3"></span>
-        <span class="item" onclick="moveItem(4)"><img src="images/item_navi_04.png" alt="item4"></span>
-        <span class="item active" onclick="moveItem(5)"><img src="images/item_navi_05.png" alt="item5"></span>
-  
-      </div>
-    </div>
-   
   </div>
+  
+  <!--button left right and list item-->
+  <div class="notSlide">
+    <div class="button-lef-right">
+      <a class="prev" onclick="moveLeft(-1)"><img src="images/arrow_l_off.png"></a>
+      <a class="next" onclick="moveRight(1)"><img src="images/arrow_r_off.png"></a>
+    </div>
+    
+    <div class="currentSlide">
+      <span class="item" onclick="moveItem(1)"><img src="images/item_navi_01.png" alt="item1"></span>
+      <span class="item" onclick="moveItem(2)"><img src="images/item_navi_02.png" alt="item2"></span>
+      <span class="item" onclick="moveItem(3)"><img src="images/item_navi_03.png" alt="item3"></span>
+      <span class="item" onclick="moveItem(4)"><img src="images/item_navi_04.png" alt="item4"></span>
+      <span class="item active" onclick="moveItem(5)"><img src="images/item_navi_05.png" alt="item5"></span>
+    
+    </div>
+  </div>
+
+</div>
 
 <script src="js/script.js"></script>
 </body>
