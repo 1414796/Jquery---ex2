@@ -66,7 +66,7 @@ function showSlide(n) {
         // }
 
     }
-    for (var j = 1; j < total; j++) {
+    for (var j = 0; j < total; j++) {
         $(".item")[j].className = $(".item")[j].className.replace("active", "");
         // $(".item")[j].removeClass("active");
     }
@@ -74,8 +74,9 @@ function showSlide(n) {
     $(".mySlide img")[slideIndex-1].style.display = "block";
 
     num = true;
-
-    $(".item")[slideIndex-1].off("click", ".active").className += " active";
-
+    $('.currentSlide').click(function(){
+        $('.mySlide').stop(true);
+    });
+    $(".item")[slideIndex-1].className += " active";
 }
 
