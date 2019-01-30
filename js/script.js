@@ -6,9 +6,9 @@ var key = 0;
 var num = false;
 
 // auto slide after 5s
-// window.setInterval(function() {
-//     $('.next').click();
-// }, 5000);
+window.setInterval(function() {
+    $('.next').click();
+}, 8000);
 
 // event when click button left
 function moveLeft(n) {
@@ -74,6 +74,10 @@ function showSlide(n) {
     $(".mySlide img")[slideIndex-1].style.display = "block";
 
     num = true;
+    $('.button-lef-right').click(function(event){
+        $('.mySlide').stop(true);
+    });
+
     $('.currentSlide').click(function(){
         $('.mySlide').stop(true);
     });
